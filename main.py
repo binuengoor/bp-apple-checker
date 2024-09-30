@@ -141,9 +141,9 @@ def check_inventory():
             results.append(f"Failed to send Pushover notification: {response.status_code}")
 
     eastern = pytz.timezone('US/Eastern')
-    current_time = datetime.now(eastern).strftime('%Y-%m-%d %H:%M:%S %Z%z')
+    current_time = datetime.now(eastern).astimezone(eastern).strftime('%Y-%m-%d %H:%M:%S %Z%z')
     results.append(f"\nGenerated: {current_time}")
-    
+
     last_run_results = "\n".join(results)
 
 # Schedule the job
