@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  bp-apple-checker:
+    build: .
+    environment:
+      - FREQUENCY=5
+      - PUSHOVER_USER_KEY=your_user_key
+      - PUSHOVER_API_TOKEN=your_api_token
+    ports:
+      - "3767:3767"
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped
