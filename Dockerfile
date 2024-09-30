@@ -1,5 +1,5 @@
-# Use an official Python runtime as a parent image
-FROM python:3.8-slim
+# Use linuxserver/python as a parent image
+FROM linuxserver/python:latest
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
