@@ -42,11 +42,6 @@ def check_inventory():
     global last_run_results, notification_message
     control = "MYW63LL/A"
     store_number = os.getenv('STORE_NUMBER',"R102")
-    search_nearby_value = os.getenv('SEARCH_NEARBY').lower()
-    if search_nearby_value == 'yes':
-        search_nearby = 'true'
-    else:
-        search_nearby = 'false'
     country = "US"
 
     args = sys.argv[1:]
@@ -62,7 +57,7 @@ def check_inventory():
     sku_list = skus_for_country(country_config["skuCode"])
     favorites = favourites_for_country(country_config["skuCode"])
 
-    query = "&".join([f'parts.{i}={quote(k)}' for i, k in enumerate(sku_list.keys())]) + f"&searchNearby={str(search_nearby).lower()}&store={store_number}"
+    query = "&".join([f'parts.{i}={quote(k)}' for i, k in enumerate(sku_list.keys())]) + f"&searchNearby=false&store={store_number}"
 
     url = f"https://www.apple.com{store_path}/shop/fulfillment-messages?{query}"
 
