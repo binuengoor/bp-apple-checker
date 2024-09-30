@@ -10,7 +10,7 @@ COPY . .
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 3767 available to the world outside this container
+# Expose port 3767 to the world outside this container
 EXPOSE 3767
 
 # Run main.py when the container launches

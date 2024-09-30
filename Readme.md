@@ -71,9 +71,6 @@ You can also use Docker Compose to manage and run the application.
 - **COUNTRIES**: Update the COUNTRIES dictionary in main.py to add or modify the countries and their store paths and SKU codes.
 - **SKUs and Favorites**: Update the `skus_for_country` and `favourites_for_country` functions in main.py to add or modify the SKUs and favorites for each country.
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## License
 
