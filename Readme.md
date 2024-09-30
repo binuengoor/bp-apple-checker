@@ -32,6 +32,7 @@ BP Apple Checker is a Python script that checks the availability of devices in A
    FREQUENCY=5
    PUSHOVER_USER_KEY=your_user_key
    PUSHOVER_API_TOKEN=your_api_token
+   STORE_NUMBER=your_store_number
    ```
 
 4. **Run the script**:
@@ -53,7 +54,7 @@ Replace `your_user_key` and `your_api_token` with your actual Pushover user key 
 
 You can also use Docker Compose to manage and run the application.
 
-1. **Copy the `docker-compose.yml` file and update env variables.
+1. **Copy the `docker-compose.yml` file and update env variables**.
 
 2. **Build and run the services**:
    docker-compose up --build
