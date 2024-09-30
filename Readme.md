@@ -1,6 +1,6 @@
 # BP Apple Checker
 
-BP Apple Checker is a Python script that checks the availability of iPhone models in Apple stores and sends notifications using Pushover. It also provides a simple web UI to display the results of the last run and the frequency at which the script runs.
+BP Apple Checker is a Python script that checks the availability of devices in Apple stores and sends notifications using Pushover. It also provides a simple web UI to display the results of the last run and the frequency at which the script runs.
 
 ## Features
 
