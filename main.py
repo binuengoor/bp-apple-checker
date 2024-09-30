@@ -36,12 +36,13 @@ def favourites_for_country(country_sku_code):
 last_run_results = ""
 notification_message = ""
 frequency = int(os.getenv("FREQUENCY", 5))  # Default to 5 minutes if not set
-search_nearby = os.getenv("SEARCH_NEARBY", "false")
+
 
 def check_inventory():
     global last_run_results, notification_message
     control = "MYW63LL/A"
     store_number = os.getenv('STORE_NUMBER',"R102")
+    search_nearby = os.getenv("SEARCH_NEARBY", "false")
     country = "US"
 
     args = sys.argv[1:]
