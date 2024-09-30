@@ -36,6 +36,7 @@ def favourites_for_country(country_sku_code):
 last_run_results = ""
 notification_message = ""
 frequency = int(os.getenv("FREQUENCY", 5))  # Default to 5 minutes if not set
+search_nearby = os.getenv('SEARCH_NEARBY', 'default_value')
 
 def check_inventory():
     global last_run_results, notification_message
@@ -56,7 +57,7 @@ def check_inventory():
     sku_list = skus_for_country(country_config["skuCode"])
     favorites = favourites_for_country(country_config["skuCode"])
 
-    query = "&".join([f'parts.{i}={quote(k)}' for i, k in enumerate(sku_list.keys())]) + f"&searchNearby=true&store={store_number}"
+    query = "&".join([f'parts.{i}={quote(k)}' for i, k in enumerate(sku_list.keys())]) + f"&searchNearby={search_nearby}&store={store_number}"
 
     url = f"https://www.apple.com{store_path}/shop/fulfillment-messages?{query}"
 
