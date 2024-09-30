@@ -42,7 +42,11 @@ def check_inventory():
     global last_run_results, notification_message
     control = "MYW63LL/A"
     store_number = os.getenv('STORE_NUMBER',"R102")
-    search_nearby = os.getenv('SEARCH_NEARBY', 'false').lower() == 'true'
+    search_nearby_value = os.getenv('SEARCH_NEARBY').lower()
+    if search_nearby_value == 'yes':
+        search_nearby = 'true'
+    else:
+        search_nearby = 'false'
     country = "US"
 
     args = sys.argv[1:]

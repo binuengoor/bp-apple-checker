@@ -33,7 +33,7 @@ BP Apple Checker is a Python script that checks the availability of devices in A
    PUSHOVER_USER_KEY=your_user_key
    PUSHOVER_API_TOKEN=your_api_token
    STORE_NUMBER=your_store_number
-   SEARCH_NEARBY= true or false # if you would like to also search nearby stores
+   SEARCH_NEARBY=yes #yes or no - if you would like to also search nearby stores
    ```
 
 4. **Run the script**:

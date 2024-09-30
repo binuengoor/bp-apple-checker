@@ -6,7 +6,7 @@ services:
       - PUSHOVER_USER_KEY=your_user_key
       - PUSHOVER_API_TOKEN=your_api_token
       - STORE_NUMBER=your_store_number # for reference: https://applestorefronts.appspot.com/
-      - SEARCH_NEARBY=true #true or false
+      - SEARCH_NEARBY=yes #yes or no
     ports:
       - "3767:3767"
     volumes:
