@@ -7,6 +7,8 @@ from datetime import datetime
 from urllib.parse import quote
 import sys
 from flask import Flask, render_template_string
+import pytz
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -138,7 +140,10 @@ def check_inventory():
         else:
             results.append(f"Failed to send Pushover notification: {response.status_code}")
 
-    results.append(f"\nGenerated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    eastern = pytz.timezone('US/Eastern')
+    current_time = datetime.now(eastern).strftime('%Y-%m-%d %H:%M:%S %Z%z')
+    results.append(f"\nGenerated: {current_time}")
+    
     last_run_results = "\n".join(results)
 
 # Schedule the job
