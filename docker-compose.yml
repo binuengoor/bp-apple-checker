@@ -1,6 +1,6 @@
 services:
   bp-apple-checker:
-    build: .
+    image: bp-apple-checker
     environment:
       - FREQUENCY=5
       - PUSHOVER_USER_KEY=your_user_key

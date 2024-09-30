@@ -42,7 +42,7 @@ BP Apple Checker is a Python script that checks the availability of devices in A
 You can also run the script using Docker.
 
 1. **Build the Docker image**:
-   `docker build -t iphone-checker .`
+   `docker build -t bp-apple-checker .`
 
 2. **Run the Docker container**:
    `docker run -e FREQUENCY=5 -e PUSHOVER_USER_KEY=your_user_key -e PUSHOVER_API_TOKEN=your_api_token -p 3767:3767 iphone-checker`
